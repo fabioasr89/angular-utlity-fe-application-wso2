@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  wso2url: "https://localhost:9443",
+  id_client:"zYQQC_cfStuzLQlUzvlrK47cdQQa",
+  apigateway_url:"http://localhost:9096/services/utlity-gateway/"
 };
 
 /*

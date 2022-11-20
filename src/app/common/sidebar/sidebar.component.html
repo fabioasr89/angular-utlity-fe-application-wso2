@@ -1,0 +1,18 @@
+<div class="width:100%;">
+        <mat-sidenav-container  mode="over">
+            <mat-sidenav>Start</mat-sidenav>
+            <mat-sidenav-content style="width:100%; margin-right: -25%;;">
+                <div class="col" *ngFor="let voce of voci" style="padding:5%;">
+                    <h3 class="{{voce.class}}" id="{{voce.id}}" (mouseover)="seleziona($event)" (mouseout)="deseleziona($event)" (click)="attiva($event)" routerLink="{{voce.link}}" routerLinkActive="active">{{voce.label}}</h3>
+                    <ul *ngFor="let child of voce.child">
+                        <li class="{{child.class}} hide" id="{{child.id}}" style="padding:5%;" (mouseover)="seleziona($event)" (mouseout)="deseleziona($event)"><a routerLink="{{child.link}}" routerLinkActive="active">{{child.label}}</a></li>
+                    </ul>
+                </div>
+
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+</div>    
+
+
+
+
